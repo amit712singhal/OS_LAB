@@ -67,15 +67,26 @@ void sjfScheduling(Process *p, int n)
   }
 }
 
-// Function to display the Gantt chart
+// Function to display the Gantt chart with idle times
 void displayGanttChart(Process *p, int n)
 {
-  int startTime = p[0].arrival;
-  printf("Gantt Chart:\n%d", startTime);
+  int currentTime = p[0].arrival; // Start from the first process arrival time
+  printf("Gantt Chart:\n");
+
+  // Print initial time
+  printf("%d", currentTime);
 
   for (int i = 0; i < n; i++)
   {
+    if (currentTime < p[i].arrival)
+    {
+      // Display idle time
+      printf(" -- XX -- %d", p[i].arrival);
+      currentTime = p[i].arrival; // Update current time to the arrival of the next process
+    }
+    // Display the process and its completion time
     printf(" -- P%d -- %d", p[i].pid, p[i].completion);
+    currentTime = p[i].completion; // Update current time to the completion of the current process
   }
 
   printf("\n\n");
