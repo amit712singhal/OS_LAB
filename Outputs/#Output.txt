@@ -1,0 +1,37 @@
+singhal-amit@singhal-amit-ThinkPad-T430:~$ vi amit.sh 
+singhal-amit@singhal-amit-ThinkPad-T430:~$ chmod +x amit.sh 
+singhal-amit@singhal-amit-ThinkPad-T430:~$ ./amit.sh
+
+Amit Singhal - 11614802722 (5C6)
+
+Available resources: 3 3 2
+
+Max matrix:
+Process 0: 7 5 3
+Process 1: 3 2 2
+Process 2: 9 0 2
+Process 3: 2 2 2
+Process 4: 4 3 3
+
+Allocation matrix:
+Process 0: 0 1 0
+Process 1: 2 0 0
+Process 2: 3 0 2
+Process 3: 2 1 1
+Process 4: 0 0 2
+
+Need matrix:
+Process 0: 7 4 3
+Process 1: 1 2 2
+Process 2: 6 0 0
+Process 3: 0 1 1
+Process 4: 4 3 1
+
+Running the Banker's Algorithm to find a safe sequence...
+
+The system is in a safe state!
+Safe Sequence: 1 3 4 0 2
+
+
+
+
