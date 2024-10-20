@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo $'\n' "5C6 - Amit Singhal (11614802722)" $'\n'
 
 # Read the number of processes
